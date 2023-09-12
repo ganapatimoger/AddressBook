@@ -83,27 +83,13 @@ WSGI_APPLICATION = 'AddressBook.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'address_book',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',  # Change to your MySQL host if necessary
-        'PORT': 3306,           # Leave empty for default MySQL port (3306)
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-            'init_command': "SET collation_connection = 'utf8_general_ci'",
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
